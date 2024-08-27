@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Spring boot templates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link th:href="@{./style.css}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- LOGO -->
+    <header>
+        <h1 class="logo-text">
+            RASA HOTEL
+        </h1>
+    </header>
+    <main>
+        <!-- WELCOME SECTION -->
+        <div id="welcome" class="section">
+            <div class="welcome-content">
+                <h1>Reset Password</h1>
+                <img src="
+                https://img.icons8.com/color/96/re-enter-pincode.png" width="125" height="120" />
+            </div>
+            <div class="email-content">
+                <p>
+                    This Email Has Send Because You're Request To Reset For You're Password. Use This Code For Reset
+                    Your Password,
+                </p>
+                <h1 th:text="${otp}"></h1>
+                <small>This code will expire in 5 minute.</small>
+            </div>
+            <!-- EMAIL INFO SECTION -->
+            <div class="email-info">
+                <p>[ This email automatically sent. Do not reply to this email. ]</p>
+            </div>
+            <!-- FOOTER -->
+            <div class="sign-email">
+                <p>Cheers,<br>Rasa Hotel Team</p>
+            </div>
+        </div>
+    </main>
+    <!-- HELP SECTION -->
+    <footer>
+        <h2>Need more help?</h2>
+        <p><a href="http://rasahotel.com" target="_blank">We&rsquo;re here to help you out</a></p>
+        <p class="copy"></p>
+    </footer>
+    <script>
+        const date = new Date();
+        document.querySelector(".copy").innerHTML = "&copy; " + date.getFullYear();
+    </script>
+</body>
+
+</html>

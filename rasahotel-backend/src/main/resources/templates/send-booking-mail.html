@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Spring boot templates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link th:href="@{./style.css}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- LOGO -->
+    <header>
+        <h1 class="logo-text">
+            RASA HOTEL
+        </h1>
+    </header>
+    <main>
+        <!-- WELCOME SECTION -->
+        <div id="welcome" class="section">
+            <div class="welcome-content">
+                <h1>Booking Request</h1>
+                <img src=" https://img.icons8.com/stencil/32/booking.png" width="125" height="120" />
+            </div>
+            <div class="email-content">
+                <div class="booking-details">
+                    <h1>Booking Details</h1>
+                    <p>Name : <span th:text="${name}"></span></p>
+                    <p>Email: <span th:text="${email}"></span></p>
+                    <p>Room Name : <span th:text="${roomName}"></span></p>
+                    <p>Room Category : <span th:text="${roomCategory}"></span></p>
+                    <p>Price : <span th:text="${roomPrice}"></span>/Night</p>
+                    <p>Room Check In : <span th:text="${checkIn}"></span></p>
+                    <p>Room Check Out : <span th:text="${checkOut}"></span></p>
+                    <p>Long: <span th:text="${dayLong}"></span> Days</p>
+                    <p>Total: <span th:text="${totalPayment}"></span></p>
+                    <p>Payment Status: <span th:text="${paymentStatus}"></span></p>
+                </div>
+                <hr>
+                <p>
+                    This data just for you're information about your booking information.
+                </p>
+            </div>
+            <!-- EMAIL INFO SECTION -->
+            <div class="email-info">
+                <p>[ This email automatically sent. Do not reply to this email. ]</p>
+            </div>
+            <!-- FOOTER -->
+            <div class="sign-email">
+                <p>Cheers,<br>Rasa Hotel Team</p>
+            </div>
+        </div>
+    </main>
+    <!-- HELP SECTION -->
+    <footer>
+        <h2>Need more help?</h2>
+        <p><a href="http://rasahotel.com" target="_blank">We&rsquo;re here to help you out</a></p>
+        <p class="copy"></p>
+    </footer>
+    <script>
+        const date = new Date();
+        document.querySelector(".copy").innerHTML = "&copy; " + date.getFullYear();
+    </script>
+</body>
+
+</html>

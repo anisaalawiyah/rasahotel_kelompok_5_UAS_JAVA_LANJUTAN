@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Spring boot templates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <link th:href="@{./style.css}" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../static/tes.css">
+</head>
+
+<body>
+    <!-- LOGO -->
+    <header>
+        <h1 class="logo-text">
+            RASA HOTEL
+        </h1>
+    </header>
+    <main>
+        <!-- WELCOME SECTION -->
+        <div id="welcome" class="section">
+            <div class="welcome-content">
+                <h1>Welcome!</h1>
+                <img src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="120" />
+            </div>
+            <div class="email-content">
+                <div class="booking-details">
+                    <h1>Booking Details</h1>
+                    <p>nama: <span>Salim Hidayat</span></p>
+                    <p>address:</p>
+                    <p>email:</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni eum dolores consequatur
+                    explicabo inventore quisquam? Dignissimos quam sunt a culpa voluptatibus veritatis soluta rerum
+                    obcaecati ut ipsa labore incidunt, facilis atque mollitia libero! Rem corporis, error exercitationem
+                    vitae modi magni, quasi tenetur ad minima inventore perspiciatis sit maxime repellat aut nisi ut!
+                    Sunt repellendus deleniti autem praesentium! Distinctio temporibus magnam, tenetur numquam delectus
+                    ex minima molestiae placeat corporis enim animi alias necessitatibus quaerat porro earum? Optio
+                    temporibus assumenda a error nam quo placeat dignissimos. Autem deleniti asperiores perspiciatis
+                    praesentium aut, culpa officiis doloremque, explicabo, ullam mollitia voluptas repellendus corporis!
+                </p>
+                <h1>Confirmation Code</h1>
+                <small>This code will expire in 5 minute.</small>
+            </div>
+            <!-- EMAIL INFO SECTION -->
+            <div class="email-info">
+                <p>[ This email automatically sent. Do not reply to this email. ]</p>
+            </div>
+            <!-- FOOTER -->
+            <div class="sign-email">
+                <p>Cheers,<br>Rasa Hotel Team</p>
+            </div>
+        </div>
+    </main>
+    <!-- HELP SECTION -->
+    <footer>
+        <h2>Need more help?</h2>
+        <p><a href="http://rasahotel.com" target="_blank">We&rsquo;re here to help you out</a></p>
+        <p class="copy"></p>
+    </footer>
+    <script>
+        const date = new Date();
+        document.querySelector(".copy").innerHTML = "&copy; " + date.getFullYear();
+    </script>
+</body>
+
+</html>
